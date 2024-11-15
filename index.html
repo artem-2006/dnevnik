@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный журнал</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Электронный журнал</h1>
+    </header>
+    <main>
+        <section id="login-section">
+            <h2>Вход</h2>
+            <form id="login-form">
+                <label for="role">Выберите роль:</label>
+                <select id="role" name="role" required>
+                    <option value="">Выберите роль</option>
+                    <option value="student">Ученик</option>
+                    <option value="teacher">Учитель</option>
+                </select>
+                <label for="login">Логин:</label>
+                <input type="text" id="login" name="login" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Войти</button>
+            </form>
+        </section>
+        <section id="student-section" style="display: none;">
+            <h2>Ученик</h2>
+            <h3>Записи</h3>
+            <table id="student-entries-table">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Класс</th>
+                        <th>Дата</th>
+                        <th>Предмет</th>
+                        <th>Оценка</th>
+                        <th>Присутствие</th>
+                        <th>Домашнее задание</th>
+                    </tr>
+                </thead>
+                <tbody id="student-entries-list">
+                </tbody>
+            </table>
+        </section>
+        <section id="teacher-section" style="display: none;">
+            <h2>Учитель</h2>
+            <form id="teacher-entry-form">
+                <label for="teacher-firstName">Имя:</label>
+                <input type="text" id="teacher-firstName" name="firstName" required>
+                <label for="teacher-lastName">Фамилия:</label>
+                <input type="text" id="teacher-lastName" name="lastName" required>
+                <label for="teacher-className">Класс:</label>
+                <select id="teacher-className" name="className" required>
+                    <option value="">Выберите класс</option>
+                    <option value="1А">1А</option>
+                    <option value="1Б">1Б</option>
+                    <option value="2А">2А</option>
+                    <option value="2Б">2Б</option>
+                    <option value="3А">3А</option>
+                    <option value="3Б">3Б</option>
+                    <option value="4А">4А</option>
+                    <option value="4Б">4Б</option>
+                    <option value="5А">5А</option>
+                    <option value="5Б">5Б</option>
+                    <option value="6А">6А</option>
+                    <option value="6Б">6Б</option>
+                    <option value="7А">7А</option>
+                    <option value="7Б">7Б</option>
+                    <option value="8А">8А</option>
+                    <option value="8Б">8Б</option>
+                    <option value="9А">9А</option>
+                    <option value="9Б">9Б</option>
+                    <option value="10А">10А</option>
+                    <option value="10Б">10Б</option>
+                    <option value="11А">11А</option>
+                    <option value="11Б">11Б</option>
+                </select>
+                <label for="teacher-date">Дата:</label>
+                <input type="date" id="teacher-date" name="date" required>
+                <label for="teacher-subject">Предмет:</label>
+                <select id="teacher-subject" name="subject" required>
+                    <option value="">Выберите предмет</option>
+                    <option value="Математика">Математика</option>
+                    <option value="Русский язык">Русский язык</option>
+                    <option value="Физика">Физика</option>
+                    <option value="Химия">Химия</option>
+                    <option value="Биология">Биология</option>
+                    <option value="История">История</option>
+                    <option value="География">География</option>
+                </select>
+                <label for="teacher-grade">Оценка:</label>
+                <input type="number" id="teacher-grade" name="grade" min="1" max="5" required>
+                <label for="teacher-attendance">Присутствие:</label>
+                <input type="checkbox" id="teacher-attendance" name="attendance">
+                <label for="teacher-homework">Домашнее задание:</label>
+                <input type="text" id="teacher-homework" name="homework" required>
+                <button type="submit">Добавить</button>
+            </form>
+            <h3>Записи</h3>
+            <table id="teacher-entries-table">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Класс</th>
+                        <th>Дата</th>
+                        <th>Предмет</th>
+                        <th>Оценка</th>
+                        <th>Присутствие</th>
+                        <th>Домашнее задание</th>
+                    </tr>
+                </thead>
+                <tbody id="teacher-entries-list">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
